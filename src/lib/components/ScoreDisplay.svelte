@@ -1,8 +1,7 @@
 <script lang="ts">
-    /**
-     * The current score in the game
-     * @default 0
-     */
+
+     @default 0
+
     export let score: number = 0;
 </script>
   
