@@ -1,10 +1,4 @@
-/**
- * Utility functions for responsive design
- */
 
-/**
- * Media query breakpoints
- */
 export enum Breakpoint {
   MOBILE = 480,
   TABLET = 768,
@@ -12,11 +6,10 @@ export enum Breakpoint {
   LARGE_DESKTOP = 1280
 }
 
-/**
- * Checks if the current viewport matches a media query
- * @param query The media query to check
- * @returns True if the media query matches
- */
+
+ @param query 
+ @returns 
+
 export function matchesMediaQuery(query: string): boolean {
   if (typeof window === 'undefined' || !window.matchMedia) {
     return false;
@@ -24,28 +17,25 @@ export function matchesMediaQuery(query: string): boolean {
   return window.matchMedia(query).matches;
 }
 
-/**
- * Checks if the current viewport is mobile size
- * @returns True if viewport width is less than or equal to mobile breakpoint
- */
+
+@returns
+
 export function isMobileView(): boolean {
   return matchesMediaQuery(`(max-width: ${Breakpoint.MOBILE}px)`);
 }
 
-/**
- * Checks if the current viewport is tablet size
- * @returns True if viewport width is less than or equal to tablet breakpoint
- */
+
+@returns 
+
 export function isTabletView(): boolean {
   return matchesMediaQuery(`(max-width: ${Breakpoint.TABLET}px)`);
 }
 
-/**
- * Adds event listener for responsive design changes
- * @param breakpoint The breakpoint to listen for
- * @param callback The callback function to execute when breakpoint changes
- * @returns Cleanup function to remove the event listener
- */
+
+@param breakpoint 
+@param callback 
+@returns 
+
 export function onBreakpointChange(
   breakpoint: Breakpoint,
   callback: (matches: boolean) => void
