@@ -1,12 +1,7 @@
-/**
- * Utility functions for accessibility
- */
 
-/**
- * Focus trap for modal dialogs
- * @param containerElement The container element to trap focus within
- * @returns Cleanup function to remove the focus trap
- */
+ @param containerElement 
+ @returns Cleanup function 
+
 export function createFocusTrap(containerElement: HTMLElement): () => void {
   if (typeof document === 'undefined') {
     return () => {};
@@ -58,11 +53,10 @@ export function createFocusTrap(containerElement: HTMLElement): () => void {
   };
 }
 
-/**
- * Announces a message to screen readers
- * @param message The message to announce
- * @param priority Whether the message is a priority announcement
- */
+
+ @param message 
+ @param priority 
+
 export function announceToScreenReader(message: string, priority: boolean = false): void {
   if (typeof document === 'undefined') {
     return;
@@ -96,13 +90,11 @@ export function announceToScreenReader(message: string, priority: boolean = fals
   }, 3000);
 }
 
-/**
- * Adds keyboard navigation to a list of items
- * @param containerElement The container element with the list items
- * @param itemSelector The selector for the list items
- * @param onSelect Callback function when an item is selected
- * @returns Cleanup function to remove the keyboard navigation
- */
+ @param containerElement 
+ @param itemSelector 
+ @param onSelect 
+ @returns Cleanup 
+
 export function addKeyboardNavigation(
   containerElement: HTMLElement,
   itemSelector: string,
