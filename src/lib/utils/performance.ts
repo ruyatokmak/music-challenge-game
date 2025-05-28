@@ -1,13 +1,9 @@
-/**
- * Performance optimization utilities
- */
 
-/**
- * Debounce function to limit how often a function can be called
- * @param fn The function to debounce
- * @param delay The delay in milliseconds
- * @returns A debounced version of the function
- */
+ Debounce function 
+ @param fn 
+ @param delay 
+ @returns
+   
 export function debounce<T extends (...args: any[]) => any>(
   fn: T,
   delay: number
@@ -28,12 +24,12 @@ export function debounce<T extends (...args: any[]) => any>(
   };
 }
 
-/**
- * Throttle function to limit how often a function can be called
- * @param fn The function to throttle
- * @param limit The time limit in milliseconds
- * @returns A throttled version of the function
- */
+
+ Throttle 
+ @param fn 
+ @param limit 
+ @returns 
+
 export function throttle<T extends (...args: any[]) => any>(
   fn: T,
   limit: number
@@ -65,11 +61,10 @@ export function throttle<T extends (...args: any[]) => any>(
   };
 }
 
-/**
- * Memoize function to cache results of expensive function calls
- * @param fn The function to memoize
- * @returns A memoized version of the function
- */
+
+ @param fn 
+ @returns 
+   
 export function memoize<T extends (...args: any[]) => any>(
   fn: T
 ): (...args: Parameters<T>) => ReturnType<T> {
@@ -88,12 +83,11 @@ export function memoize<T extends (...args: any[]) => any>(
   };
 }
 
-/**
- * Lazy loads an image
- * @param imageUrl The URL of the image to load
- * @param onLoad Callback function when the image is loaded
- * @param onError Callback function when the image fails to load
- */
+
+ @param imageUrl 
+ @param onLoad 
+ @param onError 
+
 export function lazyLoadImage(
   imageUrl: string,
   onLoad?: () => void,
@@ -116,10 +110,9 @@ export function lazyLoadImage(
   img.src = imageUrl;
 }
 
-/**
- * Checks if the browser supports the Intersection Observer API
- * @returns True if the browser supports Intersection Observer
- */
+
+ @returns
+
 export function supportsIntersectionObserver(): boolean {
   return typeof window !== 'undefined' && 'IntersectionObserver' in window;
 }
