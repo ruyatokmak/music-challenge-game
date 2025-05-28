@@ -3,9 +3,7 @@
     import { onMount } from 'svelte';
     import { setupMobileMenu } from '$lib/utils/mobileMenu';
     
-    /**
-     * Navigation item interface for header links
-     */
+
     interface NavItem {
         href: string;
         label: string;
@@ -31,22 +29,12 @@
         }
     ];
     
-    /**
-     * User profile information
-     */
     export interface UserProfile {
         name: string;
         id: number;
     }
-    
-    /**
-     * User profile data, if available
-     */
     export let user: UserProfile | null = null;
     
-    /**
-     * Whether to hide auth links
-     */
     export let hideAuth: boolean = false;
     
     // References for mobile menu functionality
@@ -254,7 +242,6 @@
         border-width: 0;
     }
     
-    /* Responsive styles */
     @media (max-width: 768px) {
         .nav-links, .user-section {
             display: none;
@@ -264,7 +251,7 @@
             display: block;
         }
         
-        /* Mobile menu open state would be handled with JavaScript */
+    
         .nav-menu.open {
             position: absolute;
             top: 100%;
