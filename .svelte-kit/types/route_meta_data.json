@@ -1,0 +1,63 @@
+{
+	"/": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/api/auth/callback": [
+		"src/routes/api/auth/callback/+server.ts"
+	],
+	"/api/auth/login": [
+		"src/routes/api/auth/login/+server.ts"
+	],
+	"/api/login": [
+		"src/routes/api/login/+server.ts"
+	],
+	"/api/logout": [
+		"src/routes/api/logout/+server.ts"
+	],
+	"/api/next-track": [
+		"src/routes/api/next-track/+server.ts"
+	],
+	"/api/ping": [
+		"src/routes/api/ping/+server.ts"
+	],
+	"/api/profile": [
+		"src/routes/api/profile/+server.ts"
+	],
+	"/api/register": [
+		"src/routes/api/register/+server.ts"
+	],
+	"/api/score": [
+		"src/routes/api/score/+server.ts"
+	],
+	"/app": [
+		"src/routes/app/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/app/api/logout": [
+		"src/routes/app/api/logout/+server.ts"
+	],
+	"/app/home": [
+		"src/routes/app/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/app/leaderboard": [
+		"src/routes/app/leaderboard/+page.server.ts",
+		"src/routes/app/+layout.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/app/leaderboard/+server.ts"
+	],
+	"/app/play": [
+		"src/routes/app/play/+page.server.ts",
+		"src/routes/app/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/app/profile": [
+		"src/routes/app/profile/+page.server.ts",
+		"src/routes/app/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/profile": [
+		"src/routes/+layout.server.ts"
+	]
+}
