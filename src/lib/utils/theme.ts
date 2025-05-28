@@ -1,16 +1,11 @@
-/**
- * Theme management utilities for the application
- */
 
 import type { ThemeMode } from '$lib/types';
 
 // Local storage key for theme preference
 const THEME_STORAGE_KEY = 'music-challenge-theme';
 
-/**
- * Sets the application theme
- * @param theme The theme to set
- */
+@param theme 
+
 export function setTheme(theme: ThemeMode): void {
   if (typeof window === 'undefined' || !window.document) {
     return;
@@ -28,10 +23,9 @@ export function setTheme(theme: ThemeMode): void {
   }
 }
 
-/**
- * Gets the current theme preference
- * @returns The current theme preference
- */
+
+ @returns The current theme preference
+
 export function getTheme(): ThemeMode {
   if (typeof window === 'undefined' || !window.localStorage) {
     return 'light';
@@ -41,10 +35,9 @@ export function getTheme(): ThemeMode {
   return savedTheme || 'system';
 }
 
-/**
- * Gets the system theme preference
- * @returns 'dark' if system prefers dark mode, otherwise 'light'
- */
+
+ @returns 
+
 export function getSystemTheme(): 'light' | 'dark' {
   if (typeof window === 'undefined' || !window.matchMedia) {
     return 'light';
@@ -53,10 +46,8 @@ export function getSystemTheme(): 'light' | 'dark' {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-/**
- * Applies the theme to the document
- * @param theme The theme to apply ('light' or 'dark')
- */
+ @param theme 
+
 function applyThemeToDocument(theme: 'light' | 'dark'): void {
   if (typeof document === 'undefined') {
     return;
@@ -73,9 +64,7 @@ function applyThemeToDocument(theme: 'light' | 'dark'): void {
   }
 }
 
-/**
- * Initializes theme based on saved preference or system preference
- */
+
 export function initializeTheme(): void {
   const theme = getTheme();
   setTheme(theme);
