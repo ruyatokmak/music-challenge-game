@@ -1,9 +1,7 @@
 <script lang="ts">
     import { createEventDispatcher, onMount } from 'svelte';
     
-    /**
-     * Interface for the HowItWorks component props
-     */
+
     interface HowItWorksProps {
         isOpen?: boolean;
     }
@@ -15,9 +13,7 @@
     
     export let isOpen: boolean = false;
     
-    /**
-     * Closes the how it works modal
-     */
+
     function closeModal(): void {
         dispatch('close');
     }
@@ -189,8 +185,7 @@
         margin-bottom: 0.5rem;
         color: #666;
     }
-    
-    /* Responsive adjustments */
+
     @media (max-width: 480px) {
         .modal-content {
             padding: 1.5rem;
