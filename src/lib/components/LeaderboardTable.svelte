@@ -1,8 +1,4 @@
 <script>
-    /** 
-     * Expects `scores` to be an array of objects:
-     * [{ rank, name, score, date }, …]
-     */
     export let scores = [];
   </script>
   
