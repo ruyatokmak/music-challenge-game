@@ -1,8 +1,7 @@
-/**
- * Handles mobile menu toggle functionality for the Header component
- * @param {HTMLElement} navMenu - The navigation menu element
- * @param {HTMLElement} toggleButton - The button that toggles the menu
- */
+
+ @param {HTMLElement} navMenu 
+ @param {HTMLElement} toggleButton 
+
 export function setupMobileMenu(navMenu: HTMLElement, toggleButton: HTMLElement): void {
   // Toggle mobile menu visibility
   const toggleMenu = (): void => {
