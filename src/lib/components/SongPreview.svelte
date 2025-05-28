@@ -2,17 +2,11 @@
     export let src: string = '';
     let audioEl: HTMLAudioElement;
     
-    /**
-     * Plays the audio clip from the beginning
-     */
     function playClip(): void { 
         audioEl.currentTime = 0; 
         audioEl.play(); 
     }
     
-    /**
-     * Stops the audio clip and resets to beginning
-     */
     function stopClip(): void { 
         audioEl.pause(); 
         audioEl.currentTime = 0; 
