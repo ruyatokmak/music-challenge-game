@@ -1,6 +1,3 @@
-/**
- * Store for managing application notifications
- */
 
 import { writable } from 'svelte/store';
 import type { Notification, NotificationType } from '$lib/types';
@@ -16,12 +13,11 @@ function createNotificationStore() {
 
   return {
     subscribe,
-    /**
-     * Add a new notification
-     * @param message The notification message
-     * @param type The notification type
-     * @param duration Duration in ms before auto-dismissing (0 for no auto-dismiss)
-     */
+  
+      @param message 
+      @param type 
+      @param duration
+
     add: (message: string, type: NotificationType = 'info', duration: number = 3000): string => {
       const id = generateId();
       
@@ -38,16 +34,13 @@ function createNotificationStore() {
       
       return id;
     },
-    /**
-     * Remove a notification by ID
-     * @param id The notification ID to remove
-     */
+    
+     @param id 
+
     remove: (id: string): void => {
       update(notifications => notifications.filter(n => n.id !== id));
     },
-    /**
-     * Clear all notifications
-     */
+    
     clear: (): void => {
       update(() => []);
     }
