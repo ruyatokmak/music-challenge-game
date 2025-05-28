@@ -6,17 +6,10 @@
         expired: void;
     }>();
     
-    /**
-     * Time remaining in seconds
-     * @default 10
-     */
     export let timeLeft: number = 10;
     
     let intervalId: ReturnType<typeof setInterval> | undefined;
   
-    /**
-     * Starts the countdown timer
-     */
     function start(): void {
       clearInterval(intervalId);
       intervalId = setInterval(() => {
